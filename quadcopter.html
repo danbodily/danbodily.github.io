@@ -1,0 +1,172 @@
+<!DOCTYPE HTML>
+<!--
+	Future Imperfect by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Single - Future Imperfect by HTML5 UP</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="single is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<nav class="links">
+							<ul>
+                                <li><a href="index.html"><b>Home</b></a></li>
+								<li><a href="robotics.html">Robotics</a></li>
+								<li><a href="#">AI</a></li>
+								<li><a href="#">Viz</a></li>
+								<li><a href="#">AR/VR</a></li>
+								<li><a href="#">Crossword Generation</a></li>
+								<li><a href="#">About Me</a></li>
+							</ul>
+						</nav>
+						<nav class="main">
+							<ul>
+								<li class="search">
+									<a class="fa-search" href="#search">Search</a>
+									<form id="search" method="get" action="#">
+										<input type="text" name="query" placeholder="Search" />
+									</form>
+								</li>
+								<li class="menu">
+									<a class="fa-bars" href="#menu">Menu</a>
+								</li>
+							</ul>
+						</nav>
+					</header>
+
+				<!-- Menu -->
+					<section id="menu">
+
+						<!-- Search -->
+							<section>
+								<form class="search" method="get" action="#">
+									<input type="text" name="query" placeholder="Search" />
+								</form>
+							</section>
+
+						<!-- Links -->
+							<section>
+								<ul class="links">
+									<li>
+										<a href="#">
+											<h3>Lorem ipsum</h3>
+											<p>Feugiat tempus veroeros dolor</p>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<h3>Dolor sit amet</h3>
+											<p>Sed vitae justo condimentum</p>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<h3>Feugiat veroeros</h3>
+											<p>Phasellus sed ultricies mi congue</p>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<h3>Etiam sed consequat</h3>
+											<p>Porta lectus amet ultricies</p>
+										</a>
+									</li>
+								</ul>
+							</section>
+
+						<!-- Actions -->
+							<section>
+								</ul>
+							</section>
+
+					</section>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Post -->
+							<article class="post">
+								<header>
+									<div class="title">
+										<h2><a href="#">Quadcopter Control</a></h2>
+										<p>Dynamics Derivation, LQR Control, and Simulation</p>
+									</div>
+									<div class="meta">
+										<time class="published" datetime="2015-11-01">November 1, 2015</time>
+									</div>
+								</header>
+                                <div style="text-align:center;">
+                                    <figure>
+                                    <a class="image featured"><img src="images/spark.jpeg" alt="" /></a>
+                                    </figure>
+                                </div>
+                                <div>
+                                    <section>
+                                        <p style="text-align:left"> Quadcopters soared in popularity while I was in college. My dad, being an avid fan, bought the latest models and would send me drone footage from high above my home city. Eventually I got curious: How did these things fly? I wasn't as interested in the hardware question so much as I was in the control algorithms under the hood.  This interest grew as I saw what people were doing with them; Intel putting out this amazing <a href="https://www.youtube.com/watch?v=aOd4-T_p5fA"><b>drone show</b></a> for instance, or this <a href="https://www.youtube.com/watch?v=w2itwFJCgFQ"><b>TED talk</b></a> that featured a quadcopter balancing a glass of water while zooming gracefully around a room. </p>
+                                        <p style="text-align:left"> Eventually I took courses in linear and nonlinear control and learned about some of these algorithms (PID, LQR, MPC and a host of nonlinear control schemes like sliding-mode and backstepping). For an open-ended, final course project, I chose to apply an LQR controller to both an inverted pendulum and a quadcopter. This involved analyzing the forces on each system (see the figure 1 below for example), deriving and linearizing the relevant equations of motion (Newton's second law), and then using these derivations to design an optimal LQR controller.  A full derivation of the equations of motion and control law can be found <a href="./pdfs/quadcopter.pdf" >here</a>.  </p>
+                                        <div style="text-align:center;">
+                                            <a class="image"><img src="images/quad_fbd.jpeg" alt="" /></a>
+                                            <p> <b>Figure 1:</b> A free body diagram listing the torques and forces present on a quadcopter.</p>
+                                        </div>
+                                        <p style="text-align:left">  Overall, I was very pleased with system performance (see the videos below). While I'm sure there are more sophisticated algorithms and modeling techniques out there, for my level of interest, seeing the output simulation was a big victory. At one point I started digging into DJI's developer kit to try to deploy this on my own personal drone.  My first deploy however resulted in a drone skipping all over my ceiling at midnight (my wife wasn't too happy). Somehow I missed the fact that DJI had a built-in a 25-50m vertical launch upon startup in their demo app, Woops!</p>
+                                        <p style="text-align:left">  I've included the simulation code below for users to play with. Users can adjust starting parameters (param.py), modify LQR weights, or define totally novel desired trajectories. This is one of my favorite demo's and I hope those even mildly interested will take the time to tinker! </p>
+                                    </section>
+                                </div>
+                                <div style="text-align:center;">
+                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/JGDmS5Go2-I" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                    <iframe width="560" height="315" align=center src="https://www.youtube.com/embed/-S5H1mTbF7I" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                    <p> LQR is applied to two seperate systems, an inverted pendulum and a quadcopter. <br> In both cases, the desired trajectory is layed out in red, and the actual behavior of the system under LQR control is in blue."</p>
+                                </div>
+                                <ul>
+                                    <li>Dependencies: numpy, scipy, matplotlib, control, slycot </li>
+                                    <li>In resurrecting this code I had issues pip3 installing slycot. I resorted to installing slycot from source <a href="https://github.com/python-control/Slycot"><b>here</b> which made it simple.</a></li>
+                                </ul>
+                                <div>
+                                    <a href="./pdfs/quadcopter.pdf" class="button large">Derivation</a>
+                                    <a href="./code/QuadCode.zip" class="button large">Code</a>
+                                </div>
+                                <!-- <iframe src="https://drive.google.com/file/d/1TgqClBTY2usR2vvN4Z1tOUce6x5SUJYr/preview" width="640" height="480"></iframe> -->
+								<footer>
+									<ul class="stats">
+										<li><a href="#">General</a></li>
+										<li><a href="#" class="icon solid fa-heart">28</a></li>
+										<li><a href="#" class="icon solid fa-comment">128</a></li>
+									</ul>
+								</footer>
+							</article>
+
+					</div>
+
+				<!-- Footer -->
+					<section id="footer">
+						<ul class="icons">
+							<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+							<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+							<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+							<li><a href="#" class="icon solid fa-rss"><span class="label">RSS</span></a></li>
+							<li><a href="#" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+						</ul>
+						<p class="copyright">&copy; Untitled. Design: <a href="http://html5up.net">HTML5 UP</a>. Images: <a href="http://unsplash.com">Unsplash</a>.</p>
+					</section>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

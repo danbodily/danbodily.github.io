@@ -791,6 +791,11 @@ input, select, textarea {
 		}
 
 		@media screen and (max-width: 1280px) {
+            /* hides profile pic when too thin when */ 
+          img#profile_pic {
+                display: none;
+              }
+            }
 
 			.row {
 				display: flex;
@@ -2288,6 +2293,7 @@ input, select, textarea {
   margin-left: auto;
   margin-right: auto;
   width: 100%;
+  max-width:300px
 }
 
 	.image {
@@ -2298,6 +2304,7 @@ input, select, textarea {
 
 		.image img {
 			display: block;
+            width: 100%
 		}
 
 		.image.left, .image.right {
@@ -3386,8 +3393,8 @@ input, select, textarea {
 
 	#sidebar {
 		margin-right: 3em;
-		min-width: 22em;
-		width: 22em;
+		min-width: 21em;
+		width: 21em;
 	}
 
 		#sidebar > * {
@@ -3623,7 +3630,7 @@ input, select, textarea {
 }
 .inner-grid {
    flex: 25%;
-   max-width: 25%;
+   max-width: 33%;
    padding: 0 4px;
 }
 .inner-grid img {
