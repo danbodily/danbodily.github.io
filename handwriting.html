@@ -1,0 +1,145 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Dan's Website</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Reggae+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Indie+Flower&family=Permanent+Marker&family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="button.css" />
+</head>
+<body>
+    
+    <div class="container">
+        <div class="nav-wrapper">
+            <div class="width-container">
+                <div class="nav-left-side">
+                    <div class="brand">
+                        <b><a class="brand-text" href="index.html">Dan's Portal</a></b>
+                    </div>
+                </div>
+                <div class="nav-right-side">
+                    <div class="nav-link-wrapper nav-link">
+                        <a href="index.html">Home</a>
+                    </div>
+                    <div class="nav-link-wrapper nav-link">
+                        <a href="aboutme.html">About Dan</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-wrapper">
+            <div class="width-container">
+                <div class="main-wrapper">
+
+                    <div class="main-left">
+                        <div class="left-padder">
+                            <img src="images/profile_pic.jpeg" att="" class=profile-pic>
+                            <p class="profile-text"><span class="portal-text">Welcome to Dan's Portal</span></p>
+                            <p class="profile-text">This site is intended to be a virtual tour of some of the more-interesting projects Dan has been involved in. Read, enjoy, download code, tinker and learn!</p>
+                            <div class="greybar">
+                            </div>
+                            <h3> Quick Links:</h3>
+                            <div class="quick-links">
+                                <h4>Robotics</h4>
+                                <ul>
+                                <a href="kinematicsandsim.html">Kinematics</a><br>
+                                <a href="planning.html">Path Planning</a><br>
+                                <a href="robotdesign.html">Design Optimization</a><br>
+                                </ul>
+                                <h4>Control Theory</h4>
+                                <ul>
+                                <a href="quadcopter.html">Quadcopter Control</a><br>
+                                <a href="quadcopter.html">Model Predictive Control</a><br>
+                                <a href="ekf.html">Kalman Filter Studies</a><br>
+                                </ul>
+                                <h4>Machine Learning</h4>
+                                <ul>
+                                <a href="eigenfaces.html">Facial Recognition</a><br>
+                                <a href="handwriting.html">Handwriting Recognition</a><br>
+                                <a href="reinforcement.html">Reinforcement Learning</a><br>
+                                </ul>
+                                <h4>Other Topics</h4>
+                                <ul>
+                                <a href="interpbspline.html">Interpolating B-Splines</a><br>
+                                <a href="cv_probs.html">Computer Vision</a><br>
+                                <a href="comp_games.html">Classic Computer Games</a><br>
+                                <a href="crisscross.html">Crossword Design</a><br>
+                                </ul>
+                                <div class="greybar">
+                                </div>
+                            </div>
+                            <h3> Other:</h3>
+                            <div class="quick-links">
+                                <a href="solveacrossword.html">Solve A Crossword</a><br>
+                                <a href="aboutme.html">About Dan</a><br>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="main-right">
+                        <div class="main-post-wrapper">
+                            <div class="main-post-expanded">
+                                <a href="" class="handwriting-background"></a>
+                                <div class="post-text-expanded">
+                                    <h1>Handwriting Recognition</h1>
+                                    <p>Machine learning and artificial inteligence have really taken off in my lifetime.  I'm no specialist in the field, but you don't really have to be to see how far the technology has come.  From IBM's <a href=https://www.youtube.com/watch?v=NJarxpYyoFI">Deep Blue</a> beating the world's top chess player in 1997 to the introduction of the first virtual assistant Siri in 2011, computers are really making their mark. In fact sometimes the technology moves so quickly, it seems we can't keep up (see <a href="https://www.youtube.com/watch?v=-5Sbw00LlWM&t=7s"> this hilarious video</a> of a woman chasing a summoned car thinking it was a runaway for example). </p>
+                                    <p>Really, the term <i>machine learning</i> is a loaded, catch-all term.  Pretty much any method implemented in a computer that that takes in data and spits out a pattern-recognizing model fits under its umbrella: Least-square regression, perceptron networks, Markov models, support vector machines, LSTM networks...  the list goes on.  Here I'll be focusing on one of the most canonical forms of machine learning, that is, supervised learning using <i>deep neural networks</i>.</p>
+                                    <p>In this personal project my goal was simple: I wanted to develop a deep neural network <i>from scratch</i> that could perform a task that my one-year-old at the time couldn't: recognize letters on paper. As I was more interested with how the method worked rather than what it could do or be applied to, I forbade myself from using off-the-shelf libraries like Tensorflow or PyTorch. I was curious about the math, that's it.</p>
+                                    <p>Full disclaimer here: I am NOT a data scientist. In general, I prefer to implement methods and algorithms directly from first principles rather than data. I have often found the black-box, opaque nature of machine learning models frustrating in that these models rarely give the user any deeper intuition about <i>why</i> a system works a certain way. This project was a personal one I chose to take on primarily because I observed the growing ML trend and wanted to explore the hype. </p>
+                                    <h2>Background</h2>
+                                    <p>Neural networks were inspired by biological processes inherant within the brain. Yes, we looked to our own brains for inspiration on how to wire the next generation of computer algorithms. In our brains, we learn rapidly how to associate inputs with outputs from a young age.  This process occurs in what's called "supervised learning."  When a child sees a picture of an airplane and is told, "that's an airplane," the child instinctively learns to map the electrical impulses received from the eyes to the electrical signals provided by the ear. Over time, the label "airplane" takes on meaning as the child sees more pictures, spots one in the sky or perhaps even flies on one. Each repeated experience provides a unique signature that helps in crafting how that child ultimately understands what an airplane is. The more data the child gets, the more accurate this connection between label and concept becomes. </p>
+                                    <p>Artificial neural networks (ANNs) are similarly constructed: Data is fed to a network of nodes that is gradually tuned over time as to facilitate this matching of input and output. Compared to human brains however, ANNs are much more simplistic in nature.  Whereas ANNs may have tens, to hundreds, to even thousands of node-to-node connections, our brains have been estimated to have over 100 trillion (yes, with a T) connections!</p>
+                                    <p>Besides scale, the other main difference between our brains and ANNs is the sheer complexity in how nodes are connected and how each node transforms data. ANNs can often work with only a few models of how information is transformed between nodes (this example will only use one!).  On the other hand, every neuron in our brain works just a tiny bit differently and holds its own unique, in-to-out mapping function. Additionally there's the question of the order of data flow.  Whereas ANNs traditionally pass data from one layer to the next in a straightforward linear fashion, our brains are sophisticated enough to allow data to revisit nodes in nonlinear ways. While we have methods of imitating this behavior (Recursive Neural Networks RNNs), these are typically implemented with simple loopback patterns, unlike the complex network architectures in the brain. Long story short, while we've pulled off some amazing technological feats, we still fall well short of modeling the complexity and power of the human brain.</p>
+                                    <p>Okay, enough interlude let's get to the nitty-gritty details.</p>
+                                    <h2>Deep Neural Networks</h2>
+                                    <h3>Background</h3>
+                                    <p>The goal in this project was to correctly identify (or classify) an image of a handwritten letter. To illustrate the method, I will first apply it to a toy example. Consider a 2D plane with points sampled from a standard normal distribution around three different focal points.</p>
+                                    <div style="text-align:center;">
+                                        <img src="images/NN/CodeSnippet1.jpg" alt="" class="post-image" />
+                                    </div>
+                                    <div style="text-align:center;">
+                                        <img src="images/NN/Classification.jpg" alt="" class="post-image" />
+                                        <p> <b>Figure 1: </b>Simple example of point classification from position on a 2D plane. </p>
+                                    </div>
+                                    <p>The task of classification is to generate a law that accurately assigns any new data point on this plane to the class of points it's most similar to. In this sense, the output of the Neural Network provides a kind of decision boundary, as shown in Figure 1. As the sampling distributions overlap ontop of eachother, there's no reasonable hope that our model will be perfectly accurate. We simply seek a model that captures the general trends in the data.</p>
+                                    <p>Each input to the neural network is a 2D vector defining a point location. The output of the neural network will be a 3D label vector. For the training data, we label the output as [1,0,0] for red, [0,1,0] for blue and [0,0,1] for green. Now our job is to define and tune a network of operators that transform our input (XY positions) as close as possible to their assigned labels.</p>
+                                    <h3>Feed Forward</h3>
+                                    <p>Let's define data flow. We choose a model with only one intermediate (hidden) layer. Let's give this intermediate layer three nodes (shown in purple below). We define a 2x3 weighting matrix W<sub>1</sub> and a 1x3 bias vector B<sub>1</sub> that will be used to transform our input data into the first hidden node. These we initialize with random numbers taken from a uniform distribution between -1 and 1. We then apply a simple sigmoid function (1/1+e<sup>-x</sup>) to the output of this transformation. This guarentees that each hidden node will fall between 0 and 1.  Finally, we define one more weighting matrix W<sub>2</sub> and one more bias vector B<sub>2</sub> to transform our hidden node values into an output label. Our structure is now depicted in the Figure 2. </p>
+                                    <div style="text-align:center;">
+                                        <img src="images/NN/NNModel.jpg" width="50px" alt="" class="post-image" />
+                                        <p> <b>Figure 2: </b>Simple example of point classification from position on a 2D plane. </p>
+                                    </div>
+                                    <p>We now have defined a simple model that can predict a label for any given input.  Note that we initialized our parameters (W<sub>1</sub>, B<sub>1</sub>, W<sub>2</sub>, and B<sub>2</sub>) to be random which means this network is just blindly guessing to start! Let's fix this by training these parameters using the provided data labels.</p>
+                                    <h3>Feed Backward</h3>
+                                    <h2>Results</h2>
+                                    <h2>Application to Handwriting</h2>
+                                    <p> </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script type="text/javascript">
+<!--
+    function toggle_visibility(id) {
+       var e = document.getElementById(id);
+       if(e.style.display == 'block')
+          e.style.display = 'none';
+       else
+          e.style.display = 'block';
+
+       var e = document.getElementById(id+"button");
+          e.style.display = 'none';
+    }
+//-->
+</script>
+</html>

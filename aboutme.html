@@ -4,11 +4,12 @@
     <title>Dan's Website</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Reggae+One&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Indie+Flower&family=Permanent+Marker&family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="button.css" />
 </head>
 <body>
     <div class="container">
@@ -16,11 +17,11 @@
             <div class="width-container">
                 <div class="nav-left-side">
                     <div class="brand">
-                        <b><a class="brand-text" href="index.html">Dan's Portal</a></b>
+                        <div><b>Dan's Portal</b></div>
                     </div>
                 </div>
                 <div class="nav-right-side">
-                    <div class="nav-link-wrapper nav-link active-nav-link">
+                    <div class="nav-link-wrapper nav-link">
                         <a href="index.html">Home</a>
                     </div>
                     <div class="nav-link-wrapper nav-link">
@@ -81,42 +82,21 @@
 
                     <div class="main-right">
                         <div class="main-post-wrapper">
-                            <div class="main-post">
-                                <div class="post-pic-wrapper">
-                                    <a href="quadcopter.html"><img src="images/spark.jpeg" att="" class=post-pic></a>
-                                </div>
-                                <div class="post-text">
-                                    <a href="quadcopter.html"><h1>Quadcopter Flight Control</h1></a>
-                                    <p>What keeps a quadcopter from blowing away on a windy day? In this post I'll introduce you to a powerful control algorithm known as a Linear Quadratic Regulator (LQR).</p>
-                                    <p>What to expect:</p>
-                                    <ul>
-                                        <li>Introduction to Quadcopter Flight Dynamics</li>
-                                        <li>Application of a Simple LQR Controller To Achieve Desired Motion</li>
-                                        <li>Full Mathematical Derivation and Downloadable Python Code</li>
-                                    </ul>
+                            <div class="aboutme-expanded">
+                                <a href="" class="aboutme-background"></a>
+                                <div class="post-text-expanded">
+                                    <h1>About Me</h1>
+                                    <p style="text-align:left">Hello, I'm Dan. As you can see from the photo above, I have two little kids, Ben and Sage and we like to have fun together.  My wife Morgan and I live in Minneosta, but are transplants from Utah where we both finished our education.  She got a master's in teaching, while I studied robotics. My first encounter with her involved me recommending she introduce her students to code (I was harboring frustrations at the time about not first touching any code until I was 22).  In hindsight, I'd probably choose a different topic to kick things off with.</p>
+                                    <p style="text-align:left">I've been a lot of different places pursuing education.  I grew up in Oregon, and made my first jump to Utah where I pursued a bachelor's in mechanical engineering. Along the way I spent a summer in Austin Texas studying isogeometric analysis with world-class experts in that field.  Looking for something a little more applied, I switched labs and, as apart of my master's work, had the fortunate experience of interning at <a href="https://www.otherlab.com">Otherlab</a> in San Francisco.  There I worked with a team in designing a pneumatic robotic arm to put on a NASA rover (see more here). My commute into SF was about two hours one way but the experience I had there was totally worth it. We were trying to do what no other engineering team had done before: build and accurately control a lightweight, totally inflatable robotic arm for deployment in a space exploration application. It really was an out-of-this-world experience (pun intended). <p>
+                                    <p style="text-align:left">Fastforward four years and I now work as a R&D engineer at 3M in Minnesota doing what I love: fusing math into code to make robots (or any system for that matter) do super-human things. Outside of work, I enjoy spending time with my family, engaging in service with my church (I'm a member of <a href="https://lds.org">The Church of Jesus Christ Of Latter-Day Saints</a>) and pursuing random new hobbies as they come.  Recently, I've spent a lot of time constructing crossword puzzles and hope to collaborate and engage more with the community on this front (check out a few of my crossword puzzles <a href="solveacrossword.html">here</a>). </p>
+                                    <p style="text-align:left">In getting to this point, I've accumulated a lot of side projects I thought would be neat to share. My intent in creating this site was to create a space where readers with little-to no relevant background could be gently exposed to the inner-workings of some of the mystifying technologies of our day. I've also included code in a few of these projects that the more hands-on reader can reference. If you leave having gained just a bit more insight into how something works, then I've succeeded.</p>
                                 </div>
                             </div>
                         </div>
-                        <div class="main-post-wrapper">
-                            <div class="main-post">
-                                <div class="post-pic-wrapper">
-                                    <a href="crisscross.html"><img src="images/crisscross.jpeg" att="" class=post-pic></a>
-                                </div>
-                                <div class="post-text">
-                                    <a href="criscross.html"><h1>Crossword Design</h1></a>
-                                    <p>How does one go about designing a New York Times crossword puzzle? This post introduces a few different platforms used to make crossword puzzles.  It also introduces CrissCross, a simple C++/Python program I wrote that helps me design crossword puzzles.</p>
-                                    <p>What to expect:</p>
-                                    <ul>
-                                        <li>Introduction to Crossword Design</li>
-                                        <li>Overview of CrissCross</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </body>
+</html>

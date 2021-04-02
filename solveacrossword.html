@@ -1,0 +1,139 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Dan's Website</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Reggae+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Indie+Flower&family=Permanent+Marker&family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="button.css" />
+</head>
+<body>
+    
+    <div class="container">
+        <div class="nav-wrapper">
+            <div class="width-container">
+                <div class="nav-left-side">
+                    <div class="brand">
+                        <b><a class="brand-text" href="index.html">Dan's Portal</a></b>
+                    </div>
+                </div>
+                <div class="nav-right-side">
+                    <div class="nav-link-wrapper nav-link">
+                        <a href="index.html">Home</a>
+                    </div>
+                    <div class="nav-link-wrapper nav-link">
+                        <a href="aboutme.html">About Dan</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-wrapper">
+            <div class="width-container">
+                <div class="main-wrapper">
+
+                    <div class="main-left">
+                        <div class="left-padder">
+                            <img src="images/profile_pic.jpeg" att="" class=profile-pic>
+                            <p class="profile-text"><span class="portal-text">Welcome to Dan's Portal</span></p>
+                            <p class="profile-text">This site is intended to be a virtual tour of some of the more-interesting projects Dan has been involved in. Read, enjoy, download code, tinker and learn!</p>
+                            <div class="greybar">
+                            </div>
+                            <h3> Quick Links:</h3>
+                            <div class="quick-links">
+                                <h4>Robotics</h4>
+                                <ul>
+                                <a href="kinematicsandsim.html">Kinematics</a><br>
+                                <a href="planning.html">Path Planning</a><br>
+                                <a href="robotdesign.html">Design Optimization</a><br>
+                                </ul>
+                                <h4>Control Theory</h4>
+                                <ul>
+                                <a href="quadcopter.html">Quadcopter Control</a><br>
+                                <a href="quadcopter.html">Model Predictive Control</a><br>
+                                <a href="ekf.html">Kalman Filter Studies</a><br>
+                                </ul>
+                                <h4>Machine Learning</h4>
+                                <ul>
+                                <a href="eigenfaces.html">Facial Recognition</a><br>
+                                <a href="handwriting.html">Handwriting Recognition</a><br>
+                                <a href="reinforcement.html">Reinforcement Learning</a><br>
+                                </ul>
+                                <h4>Other Topics</h4>
+                                <ul>
+                                <a href="interpbspline.html">Interpolating B-Splines</a><br>
+                                <a href="cv_probs.html">Computer Vision</a><br>
+                                <a href="comp_games.html">Classic Computer Games</a><br>
+                                <a href="crisscross.html">Crossword Design</a><br>
+                                </ul>
+                                <div class="greybar">
+                                </div>
+                            </div>
+                            <h3> Other:</h3>
+                            <div class="quick-links">
+                                <a href="solveacrossword.html">Solve A Crossword</a><br>
+                                <a href="aboutme.html">About Dan</a><br>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="main-right">
+                        <div class="main-post-wrapper">
+                            <div class="main-post-expanded">
+                                <a href="" class="crossword-background"></a>
+                                <div class="post-text-expanded">
+                                    <h1>Solve-A-Crossword</h1>
+                                    <p style="text-align:left">While I've been solving puzzles for years, it was only recently that I tried my hand at constructing. As a constructor, I employ a unique construction method, relying on both commercially available software and homegrown code to help me build out and color my grids (see more <a href=crisscross.html>here</a>). In 2020, I constructed a puzzle while sitting at an overlook of the Grand Canyon, waiting for my wife to complete her personal goal of going rim-to-rim-to-rim (40+ miles!). Oddly enough, that particular puzzle would later become my debut puzzle in the New York Times. Nothing like the great outdoors to really provide some inspiration!  </p> 
+                                    <p style="text-align:left">I hope you'll take a minute and try out one of my puzzles below. Feel free to subscribe if you'd like to receive more puzzles directly in your inbox.  </p>
+                                    <p style="text-align:left">On a final note, I always welcome collaboration with newer constructors. If you'd like to get into constructing (or if you're already constructing and would like to coop an idea) shoot me an email at danbodily@gmail.com. </p>
+
+
+                                    <div class="greybar crossword-wrapper">
+                                    </div>
+                                    <div class="crossword-wrapper">
+                                        <h2><a id="sunnysidebutton" class="button small"  onclick="toggle_visibility('sunnyside');">Click To Reveal Puzzle Title</a></h2>
+                                        <h2><div id="sunnyside">The Sunnyside</div></h2>
+                                        <h4>Aug, 2020</h4>
+                                        <iframe height="550" width="100%" allowfullscreen="true" style="border:none;width: 100% !important;position: static;display: block !important;margin: 0 !important;"  name="2849bd2b426af98382cd592b7e8503b9364ae4f02a8c2e539efe09683ea1af74" src="https://amuselabs.com/pmm/crossword?id=146801a2&set=2849bd2b426af98382cd592b7e8503b9364ae4f02a8c2e539efe09683ea1af74&embed=1"></iframe>
+                                    </div>
+                                    <p><b>About This Puzzle: </b>When I first started constructing, I submitted a lot of puzzles quickly, suspecting none of them would make the cut.  My focus was to get feedback, learn quickly, and not prematurely optimize poorly framed puzzles that never had a shot at getting published to begin with.  I learned a lot over many months.  This puzzle was my 10th or so that I constructed and it was about at this point that I started to feel I was learning the basic ropes of constructing. For this puzzle, I took a lot of inspiration from the first puzzle I ever wrote (see below).  While not my best work, I felt this puzzle offered a powerful "AHA!" moment to the solver. I hope you get a kick out of it.  </p>
+                                    <p>Months after constructing this puzzle, I found <a href="https://www.nytimes.com/crosswords/game/daily/2019/09/22">this New York Times puzzle</a> and realized I hadn't been the first to run after this idea. It was disappointing in the moment, but I've since come to realize that this experience is actually pretty common among constructors of all levels. Finding a unique, catchy, original theme is really the biggest challenge in building these puzzles. Even when you do find something that seems original, it seems you can never "be sure" someone somewhere hasn't done it before.</p>
+
+                                    <div class="greybar crossword-wrapper">
+                                    </div>
+                                    <div class="crossword-wrapper">
+                                        <h2><a id="hiddendrawerbutton" class="button small"  onclick="toggle_visibility('hiddendrawer');">Click To Reveal Puzzle Title</a></h2>
+                                        <h2><div id="hiddendrawer">A Hidden Drawer</div></h2>
+                                        <h4>April, 2020</h4>
+                                        <iframe height="550" width="100%" allowfullscreen="true" style="border:none;width: 100% !important;position: static;display: block !important;margin: 0 !important;"  name="2849bd2b426af98382cd592b7e8503b9364ae4f02a8c2e539efe09683ea1af74" src="https://amuselabs.com/pmm/crossword?id=3b581765&set=2849bd2b426af98382cd592b7e8503b9364ae4f02a8c2e539efe09683ea1af74&embed=1"></iframe>
+                                    </div>
+                                    <p><b>About This Puzzle: </b> This was my first puzzle ever constructed! Even though I see some major faults with it now, I was and still am proud of it as my first attempt.  "DXD" was a big offender (26-Across), being a rather contrived abbreviation.  Keep in mind I was using <a href="http://www.keiranking.com/apps/phil/">Phil</a> at this time to construct puzzles and with the constraints forced in the top left corner by the theme, I was pretty much toast.  Later I looked at this corner with more advanced software and didn't find a clean solution given my constraints.</p>
+                                    <p>Paul, my brother, helped me find the clever title and polish some of the clues. </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script type="text/javascript">
+<!--
+    function toggle_visibility(id) {
+       var e = document.getElementById(id);
+       if(e.style.display == 'block')
+          e.style.display = 'none';
+       else
+          e.style.display = 'block';
+
+       var e = document.getElementById(id+"button");
+          e.style.display = 'none';
+    }
+//-->
+</script>
+</html>

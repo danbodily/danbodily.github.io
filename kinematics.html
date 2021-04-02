@@ -4,11 +4,12 @@
     <title>Dan's Website</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Reggae+One&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Indie+Flower&family=Permanent+Marker&family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="button.css" />
 </head>
 <body>
     <div class="container">
@@ -16,11 +17,11 @@
             <div class="width-container">
                 <div class="nav-left-side">
                     <div class="brand">
-                        <b><a class="brand-text" href="index.html">Dan's Portal</a></b>
+                        <div><b>Dan's Portal</b></div>
                     </div>
                 </div>
                 <div class="nav-right-side">
-                    <div class="nav-link-wrapper nav-link active-nav-link">
+                    <div class="nav-link-wrapper nav-link">
                         <a href="index.html">Home</a>
                     </div>
                     <div class="nav-link-wrapper nav-link">
@@ -45,7 +46,7 @@
                             <div class="quick-links">
                                 <h4>Robotics</h4>
                                 <ul>
-                                <a href="kinematics.html">Robot Simulator</a><br>
+                                <a href="kinematics.html">Kinematics</a><br>
                                 <a href="planning.html">Path Planning</a><br>
                                 <a href="robotdesign.html">Design Optimization</a><br>
                                 </ul>
@@ -57,9 +58,9 @@
                                 </ul>
                                 <h4>Machine Learning</h4>
                                 <ul>
+                                <a href="eigenfaces.html">Facial Recognition</a><br>
                                 <a href="handwriting.html">Handwriting Recognition</a><br>
                                 <a href="reinforcement.html">Reinforcement Learning</a><br>
-                                <a href="eigenfaces.html">Facial Recognition</a><br>
                                 </ul>
                                 <h4>Other Topics</h4>
                                 <ul>
@@ -79,44 +80,20 @@
                         </div>
                     </div>
 
+
                     <div class="main-right">
                         <div class="main-post-wrapper">
-                            <div class="main-post">
-                                <div class="post-pic-wrapper">
-                                    <a href="quadcopter.html"><img src="images/spark.jpeg" att="" class=post-pic></a>
-                                </div>
-                                <div class="post-text">
-                                    <a href="quadcopter.html"><h1>Quadcopter Flight Control</h1></a>
-                                    <p>What keeps a quadcopter from blowing away on a windy day? In this post I'll introduce you to a powerful control algorithm known as a Linear Quadratic Regulator (LQR).</p>
-                                    <p>What to expect:</p>
-                                    <ul>
-                                        <li>Introduction to Quadcopter Flight Dynamics</li>
-                                        <li>Application of a Simple LQR Controller To Achieve Desired Motion</li>
-                                        <li>Full Mathematical Derivation and Downloadable Python Code</li>
-                                    </ul>
+                            <div class="main-post-expanded">
+                                <a href="" class=kinematics-background></a>
+                                <div class="post-text-expanded">
+                                    <h1>COMING SOON</h1>
                                 </div>
                             </div>
                         </div>
-                        <div class="main-post-wrapper">
-                            <div class="main-post">
-                                <div class="post-pic-wrapper">
-                                    <a href="crisscross.html"><img src="images/crisscross.jpeg" att="" class=post-pic></a>
-                                </div>
-                                <div class="post-text">
-                                    <a href="criscross.html"><h1>Crossword Design</h1></a>
-                                    <p>How does one go about designing a New York Times crossword puzzle? This post introduces a few different platforms used to make crossword puzzles.  It also introduces CrissCross, a simple C++/Python program I wrote that helps me design crossword puzzles.</p>
-                                    <p>What to expect:</p>
-                                    <ul>
-                                        <li>Introduction to Crossword Design</li>
-                                        <li>Overview of CrissCross</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </body>
+</html>

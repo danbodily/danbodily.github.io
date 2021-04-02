@@ -1,0 +1,119 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Dan's Website</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Reggae+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Indie+Flower&family=Permanent+Marker&family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="button.css" />
+</head>
+<body>
+    <div class="container">
+        <div class="nav-wrapper">
+            <div class="width-container">
+                <div class="nav-left-side">
+                    <div class="brand">
+                        <div><b>Dan's Portal</b></div>
+                    </div>
+                </div>
+                <div class="nav-right-side">
+                    <div class="nav-link-wrapper nav-link">
+                        <a href="index.html">Home</a>
+                    </div>
+                    <div class="nav-link-wrapper nav-link">
+                        <a href="aboutme.html">About Dan</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-wrapper">
+            <div class="width-container">
+                <div class="main-wrapper">
+
+                    <div class="main-left">
+                        <div class="left-padder">
+                            <img src="images/profile_pic.jpeg" att="" class=profile-pic>
+                            <p class="profile-text"><span class="portal-text">Welcome to Dan's Portal</span></p>
+                            <p class="profile-text">This site is intended to be a virtual tour of some of the more-interesting projects Dan has been involved in. Read, enjoy, download code, tinker and learn!</p>
+                            <div class="greybar">
+                            </div>
+                            <h3> Quick Links:</h3>
+                            <div class="quick-links">
+                                <h4>Robotics</h4>
+                                <ul>
+                                <a href="kinematicsandsim.html">Kinematics</a><br>
+                                <a href="planning.html">Path Planning</a><br>
+                                <a href="robotdesign.html">Design Optimization</a><br>
+                                </ul>
+                                <h4>Control Theory</h4>
+                                <ul>
+                                <a href="quadcopter.html">Quadcopter Control</a><br>
+                                <a href="quadcopter.html">Model Predictive Control</a><br>
+                                <a href="ekf.html">Kalman Filter Studies</a><br>
+                                </ul>
+                                <h4>Machine Learning</h4>
+                                <ul>
+                                <a href="eigenfaces.html">Facial Recognition</a><br>
+                                <a href="handwriting.html">Handwriting Recognition</a><br>
+                                <a href="reinforcement.html">Reinforcement Learning</a><br>
+                                </ul>
+                                <h4>Other Topics</h4>
+                                <ul>
+                                <a href="interpbspline.html">Interpolating B-Splines</a><br>
+                                <a href="cv_probs.html">Computer Vision</a><br>
+                                <a href="comp_games.html">Classic Computer Games</a><br>
+                                <a href="crisscross.html">Crossword Design</a><br>
+                                </ul>
+                                <div class="greybar">
+                                </div>
+                            </div>
+                            <h3> Other:</h3>
+                            <div class="quick-links">
+                                <a href="solveacrossword.html">Solve A Crossword</a><br>
+                                <a href="aboutme.html">About Dan</a><br>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="main-right">
+                        <div class="main-post-wrapper">
+                            <div class="main-post-expanded">
+                                <a href="" class="crisscross-background"></a>
+                                <div class="post-text-expanded">
+                                    <h1>Crossword Design</h1>
+                                    <p>Every so often I pick what I call a "mammoth goal." Basically, a mammoth goal is something way outside of my comfort zone that's meant to help me stretch in some new way.  One year it was a marathon, another year it was Spanish. In 2020, I set a mammoth goal to get a crossword published in a notable news outlet.  Not knowing much I started using the free open source app <a href=http://www.keiranking.com/apps/phil/>Phil</a>.  I came up with a theme I thought was pretty clever at the time, and spent a dizzying 20 hours searching for clean fill. When I was done I submitted it by mail to the New York Times and waited. I can't say I was really suprised when I received my rejection letter few months later. After all, I was totally new to the scene and people that get into this do it for years and years. On the upside I had an email from the crossword editor of the New York Times, Will Shortz. It's a bit strange seeing an email in your inbox from a name you've read in the newspaper for years. Check out that first puzzle out <a href="solveacrossword.html#hiddendrawerbutton">here</a>. </p>
+                                    <p>As I used Phil to construct more puzzles, I became painfully aware of its limitations.  I'd search for hours in corners, going word by word to find clean fills. After a few more submissions, I finally decided to throw myself into designing my own crossword construction software in hopes of speeding up the process.  About a month of late nights coding later, I dubbed the resulting program, CrissCross. I'll go through the basics of it here. </p>
+                                    <h2>CrissCross</h2>
+                                    <p>CrissCross is a combination of two programs: a backend fill solver in C++, and a front end Python GUI. The user experience can be summarized as follows (see 4:40 of the video below to see an example):</p>
+                                    <ol>
+                                        <li>After deciding on a set of theme entries and blackspace pattern, the user can target a subsection of the grid to search in (preferably one with little overlap with nontargeted subsections).</li>
+                                        <li>The user then specifies constraints beyond the theme entries (number of suboptimal entries allowed in the targeted region, wordset constraints for longer entries meant to shine, vowels/consanant only constraints for overlapping regions, etc.).</li>
+                                        <li>The user then generates a solver input file and launches the C++ backend solver. At this point the user input will be passed from the Python frontend to the C++ backend solver.</li>
+                                        <li>The solver will distribute the search among multiple processors.  As the processors identify candidate solutions, they are fed back through to the python interface and ranked by point value. The algorithm employed is complete, meaning that every possible solution for the given subsection of the grid will be found. </li>  
+                                        <li>When the search completes, the user can sift through all identified solution grids simultaneously.  This is done using a seperate utility program I wrote in python that shows all identified words for each entry in the targeted search.  The user can then pick one of these targeted entries and choose a subset of words found for that particular entry.  Grids not containing the chosen subset of words are trimmed out of the search.</li>
+                                        <li>After iteratively trimming down the set of grid solutions, the user picks a particular grid, then targets another unsolved section of the grid for search. The process is repeated until the grid is entirely filled.</li>
+                                    </ol>
+                                    <p>To design the front end I leveraged <a href="https://pypi.org/project/PyQt5/">PyQt5</a>, a package I've found to deliver incredible value for how simple its API is to use. Python is a very user-friendly programming language, but tends to be pretty slow in comparison to compiled languages. That's why I chose C++ to do the heavy lifting on the backend.</p>
+                                    <p>The backend solver works by identifying and recursively searching on entries with the fewest fill possibilities. Subsearches are distributed to multiple processors making this a very computationally scalable program. Recursive searches are only made if they adhere to the constraints provided by the user.  Once a solution has been found, the core that identified the solution temporarily reserves a solution file and dumps the solution grid. The frontend Python GUI is continually monitoring this solution file, and imports and ranks solutions for evaluation. The solving and searching process terminates when all possible entries have been explored. </p>
+                                    <p>I eventually tried CrossFire, a commercially available platform for constructing crosswords. Overall, Crossfire is a fantastic program with many useful features. One of its big advantages is that it will quickly identify and notify you when local fill won't jive with another disjointed region of the grid. One thing I find a bit annoying about CrossFire is that there is no ability to tell the grid "how much" bad fill is "okay".  You get a single slider that simply controls the cutoff under which a word is deemed unacceptable.  This led to me constantly flipping back and forth between clean and less clean searches as the greatest fills commonly exist with just one or two low-point words. </p>
+                                    <p>Nowadays, I use both Crossfire and CrissCross to hash out my grids. This video highlights the strengths and weaknesses of CrissCross against other platforms like Phil and Crossfire and shows how I go about filling a grid - Phil-(0:00), CrissCross-(2:00), CrossFire-(6:45). </p>
+                                    <iframe width="100%" height="400" src="https://www.youtube.com/embed/03YL4lbkAcI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                    <h2>Publishing</h2>
+                                    <p>As I matured as a constructor, I decided to reach out to Jeff Chen, a well-known constructor that gives critiques of puzzles on his website, <a href="https://xwordinfo.com">XwordInfo.com</a>.  I took a puzzle idea to him and together we worked on it, eventually producing a puzzle that would later be accepted by the Times.  Check that mammoth goal off the list! I learned a lot from Jeff.  I've become much more picky about what ideas I choose to run with, and when I find an idea, I'll often spend days before I decide on a set of theme entries that really fits the bill. Overall, it was a great experience working with an experienced constructor and I'd highly recommend it for those new to the game.</p>
+                                    <p>Every so often I'll put up a puzzle on this website.  If you'd like to try one of my puzzles, click <a href="solveacrossword.html">here</a>!
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

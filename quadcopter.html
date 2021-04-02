@@ -1,172 +1,140 @@
 <!DOCTYPE HTML>
-<!--
-	Future Imperfect by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
 <html>
-	<head>
-		<title>Single - Future Imperfect by HTML5 UP</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-	</head>
-	<body class="single is-preload">
+<head>
+    <title>Dan's Website</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Reggae+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Indie+Flower&family=Permanent+Marker&family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="button.css" />
+</head>
+<body>
+    <div class="container">
+        <div class="nav-wrapper">
+            <div class="width-container">
+                <div class="nav-left-side">
+                    <div class="brand">
+                        <div><b>Dan's Portal</b></div>
+                    </div>
+                </div>
+                <div class="nav-right-side">
+                    <div class="nav-link-wrapper nav-link">
+                        <a href="index.html">Home</a>
+                    </div>
+                    <div class="nav-link-wrapper nav-link">
+                        <a href="aboutme.html">About Dan</a>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-		<!-- Wrapper -->
-			<div id="wrapper">
+        <div class="content-wrapper">
+            <div class="width-container">
+                <div class="main-wrapper">
 
-				<!-- Header -->
-					<header id="header">
-						<nav class="links">
-							<ul>
-                                <li><a href="index.html"><b>Home</b></a></li>
-								<li><a href="robotics.html">Robotics</a></li>
-								<li><a href="#">AI</a></li>
-								<li><a href="#">Viz</a></li>
-								<li><a href="#">AR/VR</a></li>
-								<li><a href="#">Crossword Generation</a></li>
-								<li><a href="#">About Me</a></li>
-							</ul>
-						</nav>
-						<nav class="main">
-							<ul>
-								<li class="search">
-									<a class="fa-search" href="#search">Search</a>
-									<form id="search" method="get" action="#">
-										<input type="text" name="query" placeholder="Search" />
-									</form>
-								</li>
-								<li class="menu">
-									<a class="fa-bars" href="#menu">Menu</a>
-								</li>
-							</ul>
-						</nav>
-					</header>
-
-				<!-- Menu -->
-					<section id="menu">
-
-						<!-- Search -->
-							<section>
-								<form class="search" method="get" action="#">
-									<input type="text" name="query" placeholder="Search" />
-								</form>
-							</section>
-
-						<!-- Links -->
-							<section>
-								<ul class="links">
-									<li>
-										<a href="#">
-											<h3>Lorem ipsum</h3>
-											<p>Feugiat tempus veroeros dolor</p>
-										</a>
-									</li>
-									<li>
-										<a href="#">
-											<h3>Dolor sit amet</h3>
-											<p>Sed vitae justo condimentum</p>
-										</a>
-									</li>
-									<li>
-										<a href="#">
-											<h3>Feugiat veroeros</h3>
-											<p>Phasellus sed ultricies mi congue</p>
-										</a>
-									</li>
-									<li>
-										<a href="#">
-											<h3>Etiam sed consequat</h3>
-											<p>Porta lectus amet ultricies</p>
-										</a>
-									</li>
-								</ul>
-							</section>
-
-						<!-- Actions -->
-							<section>
-								</ul>
-							</section>
-
-					</section>
-
-				<!-- Main -->
-					<div id="main">
-
-						<!-- Post -->
-							<article class="post">
-								<header>
-									<div class="title">
-										<h2><a href="#">Quadcopter Control</a></h2>
-										<p>Dynamics Derivation, LQR Control, and Simulation</p>
-									</div>
-									<div class="meta">
-										<time class="published" datetime="2015-11-01">November 1, 2015</time>
-									</div>
-								</header>
-                                <div style="text-align:center;">
-                                    <figure>
-                                    <a class="image featured"><img src="images/spark.jpeg" alt="" /></a>
-                                    </figure>
-                                </div>
-                                <div>
-                                    <section>
-                                        <p style="text-align:left"> Quadcopters soared in popularity while I was in college. My dad, being an avid fan, bought the latest models and would send me drone footage from high above my home city. Eventually I got curious: How did these things fly? I wasn't as interested in the hardware question so much as I was in the control algorithms under the hood.  This interest grew as I saw what people were doing with them; Intel putting out this amazing <a href="https://www.youtube.com/watch?v=aOd4-T_p5fA"><b>drone show</b></a> for instance, or this <a href="https://www.youtube.com/watch?v=w2itwFJCgFQ"><b>TED talk</b></a> that featured a quadcopter balancing a glass of water while zooming gracefully around a room. </p>
-                                        <p style="text-align:left"> Eventually I took courses in linear and nonlinear control and learned about some of these algorithms (PID, LQR, MPC and a host of nonlinear control schemes like sliding-mode and backstepping). For an open-ended, final course project, I chose to apply an LQR controller to both an inverted pendulum and a quadcopter. This involved analyzing the forces on each system (see the figure 1 below for example), deriving and linearizing the relevant equations of motion (Newton's second law), and then using these derivations to design an optimal LQR controller.  A full derivation of the equations of motion and control law can be found <a href="./pdfs/quadcopter.pdf" >here</a>.  </p>
-                                        <div style="text-align:center;">
-                                            <a class="image"><img src="images/quad_fbd.jpeg" alt="" /></a>
-                                            <p> <b>Figure 1:</b> A free body diagram listing the torques and forces present on a quadcopter.</p>
-                                        </div>
-                                        <p style="text-align:left">  Overall, I was very pleased with system performance (see the videos below). While I'm sure there are more sophisticated algorithms and modeling techniques out there, for my level of interest, seeing the output simulation was a big victory. At one point I started digging into DJI's developer kit to try to deploy this on my own personal drone.  My first deploy however resulted in a drone skipping all over my ceiling at midnight (my wife wasn't too happy). Somehow I missed the fact that DJI had a built-in a 25-50m vertical launch upon startup in their demo app, Woops!</p>
-                                        <p style="text-align:left">  I've included the simulation code below for users to play with. Users can adjust starting parameters (param.py), modify LQR weights, or define totally novel desired trajectories. This is one of my favorite demo's and I hope those even mildly interested will take the time to tinker! </p>
-                                    </section>
-                                </div>
-                                <div style="text-align:center;">
-                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/JGDmS5Go2-I" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                                    <iframe width="560" height="315" align=center src="https://www.youtube.com/embed/-S5H1mTbF7I" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                                    <p> LQR is applied to two seperate systems, an inverted pendulum and a quadcopter. <br> In both cases, the desired trajectory is layed out in red, and the actual behavior of the system under LQR control is in blue."</p>
-                                </div>
+                    <div class="main-left">
+                        <div class="left-padder">
+                            <img src="images/profile_pic.jpeg" att="" class=profile-pic>
+                            <p class="profile-text"><span class="portal-text">Welcome to Dan's Portal</span></p>
+                            <p class="profile-text">This site is intended to be a virtual tour of some of the more-interesting projects Dan has been involved in. Read, enjoy, download code, tinker and learn!</p>
+                            <div class="greybar">
+                            </div>
+                            <h3> Quick Links:</h3>
+                            <div class="quick-links">
+                                <h4>Robotics</h4>
                                 <ul>
-                                    <li>Dependencies: numpy, scipy, matplotlib, control, slycot </li>
-                                    <li>In resurrecting this code I had issues pip3 installing slycot. I resorted to installing slycot from source <a href="https://github.com/python-control/Slycot"><b>here</b> which made it simple.</a></li>
+                                <a href="kinematicsandsim.html">Kinematics</a><br>
+                                <a href="planning.html">Path Planning</a><br>
+                                <a href="robotdesign.html">Design Optimization</a><br>
                                 </ul>
-                                <div>
-                                    <a href="./pdfs/quadcopter.pdf" class="button large">Derivation</a>
-                                    <a href="./code/QuadCode.zip" class="button large">Code</a>
+                                <h4>Control Theory</h4>
+                                <ul>
+                                <a href="quadcopter.html">Quadcopter Control</a><br>
+                                <a href="quadcopter.html">Model Predictive Control</a><br>
+                                <a href="ekf.html">Kalman Filter Studies</a><br>
+                                </ul>
+                                <h4>Machine Learning</h4>
+                                <ul>
+                                <a href="eigenfaces.html">Facial Recognition</a><br>
+                                <a href="handwriting.html">Handwriting Recognition</a><br>
+                                <a href="reinforcement.html">Reinforcement Learning</a><br>
+                                </ul>
+                                <h4>Other Topics</h4>
+                                <ul>
+                                <a href="interpbspline.html">Interpolating B-Splines</a><br>
+                                <a href="cv_probs.html">Computer Vision</a><br>
+                                <a href="comp_games.html">Classic Computer Games</a><br>
+                                <a href="crisscross.html">Crossword Design</a><br>
+                                </ul>
+                                <div class="greybar">
                                 </div>
-                                <!-- <iframe src="https://drive.google.com/file/d/1TgqClBTY2usR2vvN4Z1tOUce6x5SUJYr/preview" width="640" height="480"></iframe> -->
-								<footer>
-									<ul class="stats">
-										<li><a href="#">General</a></li>
-										<li><a href="#" class="icon solid fa-heart">28</a></li>
-										<li><a href="#" class="icon solid fa-comment">128</a></li>
-									</ul>
-								</footer>
-							</article>
+                            </div>
+                            <h3> Other:</h3>
+                            <div class="quick-links">
+                                <a href="solveacrossword.html">Solve A Crossword</a><br>
+                                <a href="aboutme.html">About Dan</a><br>
+                            </div>
+                        </div>
+                    </div>
 
-					</div>
+                    <div class="main-right">
+                        <div class="main-post-wrapper">
+                            <div class="main-post-expanded">
+                                <a href="" class=quad-background></a>
+                                <div class="post-text-expanded">
+                                    <h1>Quadcopter Flight Control</h1>
+                                    <p style="text-align:left"> Quadcopters soared in popularity while I was in college. My dad, being an avid fan, bought the latest models and would send me drone footage from high above my home city. Eventually I got curious: How did these things fly? I wasn't as interested in the hardware so much as I was in the control algorithms under the hood.  This interest peaked as I saw what people were doing with them; Intel putting out this amazing <a href="https://www.youtube.com/watch?v=aOd4-T_p5fA"><b>drone show</b></a> for instance, or this <a href="https://www.youtube.com/watch?v=w2itwFJCgFQ"><b>TED talk</b></a> that featured a quadcopter balancing a glass of water while zooming gracefully around a room. </p>
+                                    <p style="text-align:left"> Eventually I took courses in linear/nonlinear control theory and studied up on some of these algorithms. For an open-ended linear controls project, I implemented a Linear Quadratic Regulator (LQR) on a quadcopter and was pleasantly suprised to find I could programmatically fly it around.  The details of the math get a bit tricky, so I will only give a high-level overview of my approach to the problem here.  For a full mathematical derivation of the equations of motion and LQR controller, check out <a href="./pdfs/quadcopter.pdf" >this link</a>.</p>
+                                    <div style="text-align:center;">
+                                        <img src="images/quad_fbd.jpeg" alt="" class="post-image" />
+                                        <p> <b>Figure 1:</b> A free body diagram listing the torques and forces present on a quadcopter.</p>
+                                    </div>
+                                    <h2>Quadcopter Dynamics</h2>
+                                    <p>Before any control algorithm can be applied to a system, the dynamics of that system need to be well understood; we need a mathematical relationship that describes how the inputs under the user's control map to system behavior.</p>
+                                    <p>In the case of a quadcopter, the inputs we control are the forces and torques applied at each propeller blade of the quadcopter. These inputs are naturally described along the axes of a <i>body fixed frame</i>; that is a frame that moves and tilts with the quadcopter's motion. The quadcopter also experiences gravity which can be modeled as a force acting through its center of mass, directed in the Z-axis of a <i>ground-fixed frame</i>. These forces are shown in <b>Figure 1</b> above. </p>
+                                    <p>The outputs that describe system behavior are fairly straight forward.  They are the quadcopter's positional and rotational state at any given time. In control theory, we often talk about the notion of what's called a <i>state space</i>. The state space is a minimal set of variables that can be used to fully constrain or determine the state of a system at any given point in time. By identifying this minimal representation of the state space and establishing relationships between state variables and forces applied, we can build the mathematical model we need for control.</p>
+                                    <p>In this problem, the state space of a quadcopter's motion can be completely described using 12 independant variables:  three describing <b>linear velocity</b>, three describing <b>position</b>, three describing <b>rotational velocity</b>, and three describing <b>orientation</b>. With 12 states, we need 12 independant equations to fully render our quadcopter controllable.</p>
+                                    <p>The Newton-Euler equations helps us here. In classical mechanics, the Newton-Euler equations describe how forces and torques on a system combine with the system's mass and moment of inertia to generate translational and rotational dynamics. These help us tie our inputs (forces and torques) to the derivatives of our state variables (both orientational and translational). This list is a summary of how we actually go about deriving these equations.  If you're not interested in running through the math, feel free to skip it.</p>
+                                    <ol>
+                                        <li><b>Linear Velocity</b>: You've likely seen Newton's second law (Force = Mass x Acceleration) in a physics course.  Using this law in the three principle axes of the body frame yields three state equations describing how the derivative of linear velocity (acceleration) relates to the applied forces (<a href="./pdfs/quadcopter.pdf" >Eq. 19</a>). The math is a bit tricky as the frame of reference the equations are derived in (the body frame) is itself moving. Care must be taken to factor in this motion  (<i>w x v</i> in <a href="./pdfs/quadcopter.pdf">Eq. 17</a>). It also becomes important to transform the gravitational force from the inertial frame into the body fixed frame. This is done using a rotation matrix transformation derived from the Euler angle state variables we use to describe quadcopter orientation.  </li>
+                                        <li><b>Position</b>: We obtain three more equations by noting that the derivative of position is linear velocity. Easy, done! Wait, not quite... One subtelty arises in the math.  It turns out that while describing linear velocity in the body frame is a good idea, position, as described in a moving body frame, has very little utility. To make things friendlier, we need to relate the components of linear velocity (as expressed in the quadcopter's body fixed frame) back to position as measured in a ground-fixed (north-east-down), inertial frame. Doing this involves using a body-to-ground matrix transformation (the matrix inverse of that we used with gravitational force in step 1!). See <a href="./pdfs/quadcopter.pdf">Eq. 20</a> for this step.</li>
+                                        <li><b>Rotational Velocity</b>: Euler's equation is the rotational analog of Newton's equation; namely, it allows us to derive equations relating applied torque and/or moments to the derivatives of rotational velocity (<a href="./pdfs/quadcopter.pdf" >Eq. 13</a>). The Euler equations are notably more complex that Newton's, but become much simpler working from a frame of reference about which the mass of the system is symmetric. Here we sum torques/moments generated by the propellers about the quadcopter's body frame and relate them to the derivative of rotational velocity as expressed in this same frame (see <a href="./pdfs/quadcopter.pdf" >Eq. 13</a> and note that the first terms cancel as Ix=Iy=Iz).  </li>
+                                        <li><b>Orientation</b>: Similar to how position (step 2) relates to linear velocity (step 1), the derivatives of the Euler angles describing orientation relate to the rotational velocity (step 3). Again, the same subtelty exists as in step 2; namely, each component of orientational velocity needs to be related to an Euler angle derivative as described from a ground-fixed inertial frame. To derive this relationship, we first find this same relationship as described in the body frame (<a href="./pdfs/quadcopter.pdf" >Eq. 14</a>). Each Euler angle derivative goes through a different transformation to describe the rotation it generates in the body frame. In this case for example, the first Euler angle derivative is measured about the ground fixed frame and must therefore be transformed by all three Euler angles to be expressed in the body frame. The second Euler angle derivative is measured about the resulting rotation of the first Euler angle, and thus only needs to pass through the matrix transformations induced by the last two Euler angles. Likewise the third need only pass through the last Euler angle transformation. Once this relationship is derived in the body frame, we can simply invert the relationship (a simple matrix in this case) to find our final three state equations as expressed in the ground-fixed frame (<a href="./pdfs/quadcopter.pdf" >Eq. 15</a>).</li>
+                                    </ol>
+                                    <h2>Linearization</h2>
+                                    <p>The previous section leaves us with 12 nonlinear ordinary differential equations we can use to describe system dynamics; that is, how input forces and torques generate quadcopter motion.  Before we can implement an LQR controller, we first need to <i>linearize</i> these equations about a desired state. To do this we use a first-order Taylor series approximation of each state equation with respect to time. This involves taking a whole lot of partial derivatives, though the majority of these terms wind up to be zero (as seen in the A and B matrix in <a href="./pdfs/quadcopter.pdf" >Eq. 22</a>). Taylor series approximations require a point about which the approximation is "centered".  In this case we center the approximation about a desired state. The state I chose to linearize about was zero in all state variables except for quadcopter position and nominal motor force. The desired quadcopter position is left up to the user's specification and can vary in time. The nominal force of each motor is equal to one-fourth the overall weight of the quadcopter. Under the assumption that the user's input trajectory is well-behaved (continuous, dynamically constrained, etc.), the resulting set of 12 linear equations can be used with an LQR controller.</p> 
+                                    <h2>LQR Implementation</h2>
+                                    <p>The LQR controller is a <i>feedback controller</i>.  A feedback controller is a controller that continuously measures the current state of a system, and decides from that state what the system input should be to obtain desired results. While in practice there may be error in system measurements, I have assumed none here and feedback the true state to the controller. </p>
+                                    <p>The LQR controller is unique, in that the feedback gains it provides are derived to be mathematically optimal with respect to a user's set of preferences. To be more specific, the user first provides a set of weightings that describe how to penalize error in each state variable with respect to one another.  Solving the LQR formulation with this weighting then yields a set of multiplicative gains that, when applied in a feedback loop over an infinite time horizon, minimizes the user-weighted integrated squared error in time. </p>
+                                    <p>In practice, tuning the LQR gains takes a bit of work. In my case, I prioritized the position of the quadcopter over the other state variables by a factor of 100 and got a good response.</p>
+                                    <h2>Results</h2>
+                                    <p style="text-align:left">  Overall, I was very pleased with system performance (see the video below). While I'm sure there are more sophisticated algorithms and modeling techniques out there, for my level of interest, seeing the output simulation was a big victory in this case. At one point I started digging into DJI's developer kit to try to see if I could deploy this controller on my own personal drone.  My first deploy however resulted in a drone skipping all over my ceiling at midnight (my wife wasn't too happy). Somehow I missed the fact that DJI had a built-in 25-50m vertical launch upon startup in their demo app. <em><strong>Whoops!</strong></em></p>
 
-				<!-- Footer -->
-					<section id="footer">
-						<ul class="icons">
-							<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-							<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-							<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-							<li><a href="#" class="icon solid fa-rss"><span class="label">RSS</span></a></li>
-							<li><a href="#" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
-						</ul>
-						<p class="copyright">&copy; Untitled. Design: <a href="http://html5up.net">HTML5 UP</a>. Images: <a href="http://unsplash.com">Unsplash</a>.</p>
-					</section>
-
-			</div>
-
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-
-	</body>
+                                    <div style="text-align:center;">
+                                        <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/JGDmS5Go2-I" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+                                        <iframe width="100%" height="315px" align=center src="https://www.youtube.com/embed/-S5H1mTbF7I" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                        <h5> LQR is applied to drive a quadcopter towards target (shown as a red dot). In both cases, the desired trajectory is layed out in red, and the actual behavior of the system under LQR control is in blue."</h5>
+                                    </div>
+                                    <h2>Your Turn</h2>
+                                    <p style="text-align:left">  I've included the simulation code below for users to play with. Users can adjust starting parameters (param.py), modify LQR weights, or define totally novel desired trajectories. This is one of my favorite demos as it's relatively easy to setup. I hope those even mildly interested will take the time to tinker! </p>
+                                    <ul>
+                                        <li>Dependencies: numpy, scipy, matplotlib, control, slycot </li>
+                                        <li>In resurrecting this code I had issues pip3 installing slycot. I resorted to installing slycot from source <a href="https://github.com/python-control/Slycot"><b>here</b> which made it simple.</a></li>
+                                    </ul>
+                                    <div class="button-wrapper">
+                                        <a href="./pdfs/quadcopter.pdf" class="button large">Derivation</a>
+                                        <a href="./code/QuadCode.zip" class="button large">Code</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
 </html>
